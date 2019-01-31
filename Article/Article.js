@@ -8,21 +8,30 @@ class Article {
     this.expandButton = this.domElement.querySelector('.expandButton');
     // Using your expandButton reference, update the text on your expandButton to say "expand"
     this.expandButton.innerText = "expand";
+    // remove button
+    this.remove = this.domElement.querySelector('.remove');
     // Set a click handler on the expandButton reference, calling the expandArticle method.
     this.expandButton.addEventListener('click',() => {this.expandArticle()})
   }
+  removeArticle() {
+    setTimeout(() => {this.domElement.style.display = 'none'},400);
+    TweenMax.to(this.domElement, 0.5, {
+      opacity:0,
+    });
+  }//End
 
-  expandArticle() {
+expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     this.domElement.classList.toggle('article-open')
-    if(this.expandButton.innerText === "open"){
-      this.expandButton.innerText = "open"
+    if(this.expandButton.innerText = 'expand'){
+      this.expandButton.innerText = 'close'
     }
-    else{
-      this.expandButton.innerText = "close"
-    }
+   // if(this.expandButton.innerText = 'close'){
+     // this.expandButton.innerText = 'open'
+  //  }
   }
 }
+
 
 /* START HERE: 
 

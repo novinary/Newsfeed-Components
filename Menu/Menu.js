@@ -4,11 +4,10 @@ const toggleMenu = () => {
   /* added animation to menu */
  if(menu.classList.contains("menu--open"))
   {
-   TweenMax.to(menu, 1, {left: 0, })
+    TweenMax.to(menu, 1, {left: 0})
   } else {
-   TweenMax.to(menu, 1, {left: -350})
- };
-  
+    TweenMax.to(menu, 1, {left: -350})
+  }
 }
 
 // Start Here: Create a reference to the ".menu" class
